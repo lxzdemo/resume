@@ -1,0 +1,384 @@
+html {
+    font-size: 100px;
+}
+html,body { 
+    position: relative;
+    z-index: -4;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #f4f4f4;
+}
+.main {
+        
+    position: relative;
+  z-index: -3;
+  margin: 0 auto;
+  max-width: 640px;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+.loading,.phone,.message,.cube,.swiper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+.loading {
+//  display: block;
+    background: #000;
+    .title {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1.4rem;
+        margin-top: -2.2rem;
+        color: #fff;
+        text-align: center;
+        letter-spacing: .04rem;
+        h2 {
+            font-size: .5rem;
+        }
+        h3 {
+            margin-top: .2rem;
+            font-size: .45rem;
+        }
+        
+    }
+    .progress {
+            position: absolute;
+            width: 4.6rem;
+            height: .3rem;
+            left: 50%;
+            top: 50%;
+            margin-left: -2.3rem;
+            margin-top: .85rem;
+            background: #fff;
+            border-radius: .06rem;
+            .run {
+                width:0;
+                height: 100%;
+                border-radius: .06rem;
+                background: linear-gradient(45deg,#5cb85c 25%,#74c274 25%,#74c274 50%,#5cb85c 50%,#5cb85c 75%,#74c274 75%);
+                -webkit-background: linear-gradient(45deg,#5cb85c 25%,#74c274 25%,#74c274 50%,#5cb85c 50%,#5cb85c 75%,#74c274 75%);
+                background-size: 0.3rem 0.3rem;
+                background-position: 0 0.3rem;
+                transition: all 1s linear;
+                animation: loadingMove 1s linear infinite both; 
+            }
+        }
+}
+
+@keyframes loadingMove{
+    0% {
+        background-position: 0 0;
+    }
+     100% {
+        background-position: 0 .3rem;
+    }
+}
+
+//loading 结束
+
+//phone 开始
+
+.phone {
+    
+    z-index: -2;
+    background: url("../imges/zf_phoneBg.jpg")no-repeat center;
+    background-size: 100% 100%;
+    h1 {
+        position: absolute;
+        top: .5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2.62rem;
+        height: 1.25rem;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .time {
+        position: absolute;
+        top: 1.85rem;
+        text-align: center;
+        font-size: .3rem;
+        width: 100%;
+        line-height: .3rem;
+        height: .3rem;
+        letter-spacing: .005rem;
+        color: #fff;
+        display: none;
+    }
+    .phoneItem {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: .3rem;
+        width: 5.2rem;
+        height: 3.6rem;
+        background: url(../imges/zf_phoneListen.png) no-repeat center;
+        background-size: 100% 100%;
+        .touch {
+            position: absolute;
+            z-index: 10;
+            right: -.07rem;
+            bottom: .47rem;
+            width: 1.6rem;
+            height: 1.6rem;
+           }
+        .move {
+            position: absolute;
+            right: -.07rem;
+            bottom: .47rem;
+            width: 1.6rem;
+            height: 1.6rem;
+                z-index: -1;
+               border: .03rem solid #4CD864;
+               border-radius: 50%;
+               transition: 1s animation;
+               animation: runMove 1s linear infinite both;
+                
+               
+        }
+    }
+   
+    .details {
+        position: absolute;
+        width: 5.2rem;
+        height: 6.59rem;
+        background: url(../imges/zf_phoneDetail.png) no-repeat;
+        background-size: 100% 100%;
+        bottom: .3rem;
+        left: 50%;
+        margin-left: -2.6rem;
+        transform: translateY(7rem);
+        -webkit-transform: translateY(7rem);
+        transition: all .8s;
+        -webkit-transition: all .8s;
+         .touch{
+          position: absolute;
+          bottom: .28rem;
+          left: 50%;
+          margin-left: -0.8rem;
+          width: 1.6rem;
+          height: 1.6rem;
+          z-index: 10;
+
+    }
+    }
+}
+@keyframes runMove {
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+//phone 結束
+
+//message 開始
+.message {
+    background: #eaeaea;
+    .talkList {
+        width: 100%;
+        margin-top: .2rem;
+        transition: .3s;
+        li {
+            position: relative;
+            max-width: 3.6rem;
+            padding: .25rem;
+            margin-bottom: .4rem;
+            letter-spacing: .004rem;
+            font-size: .26rem;
+            border-radius: .1rem;
+              transition: 1s;
+              transform: translateY(1rem);
+              opacity: 0;
+            img {
+                position: absolute;
+                top: 0;
+                width: .82rem;
+                height: .82rem;
+            }
+            i {
+                position: absolute;
+                top: .2rem;
+                width: .1rem;
+                height: .2rem;
+            }
+            &.student {
+                float: left;
+                margin-left: 1.25rem;
+                border:.02rem  solid #cacaca;
+                background: #fff;
+                img {
+                    left: -1rem;
+                
+                }
+                i {
+                    background: url(../imges/zf_messageArrow1.png) no-repeat center;
+                    background-size: 100% 100%;
+                     left: -.1rem;
+                }
+            }
+            &.teacher {
+                float: right;
+                 margin-right: 1.25rem;
+                 border:.02rem  solid #94b474;
+                 background: #A2E45C;
+                 img {
+                    right: -1rem;
+                }
+                i {
+                    background: url(../imges/zf_messageArrow2.png) no-repeat center;
+                    background-size: 100% 100%;
+                   
+                    right:-.1rem ;
+                }
+            }
+        }
+    }
+    .keyBoard {
+        position: absolute;
+        left: 0;
+        bottom: -.54rem;
+        width: 100%;
+        height: 5.16rem;
+        background: url(../imges/zf_messageKeyboard.png) no-repeat center;
+        background-size: 100% 100%;
+        transition: 1s;
+        transform: translateY(3.7rem);
+        span {
+            display: none;
+           position: absolute;
+            width: 4rem;
+            height: .4rem;
+            top: .35rem;
+            left: .9rem;
+            line-height: .4rem;
+            font-size: .25rem;
+        }
+        .submit {
+            display: none;
+            position: absolute;
+            right: .1rem;
+            bottom: .6rem;
+            width: 1.47rem;
+            height: .74rem;
+            background: url(../imges/zf_messageChat.png) no-repeat;
+            background-size: 100% 100%;
+            
+        }
+    }
+}
+//message 結束
+
+//cube 开始
+.cube{
+  background: url("../imges/zf_cubeBg.jpg")no-repeat;
+  background-size: cover;
+  .tip{
+    position: absolute;
+    bottom: .5rem;
+    left: 50%;
+    margin-left: -1.97rem;
+    width: 3.94rem;
+    height: .44rem;
+  }
+  .box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2.55rem 0 0 -2.55rem;
+    width: 5.1rem;
+    height: 5.1rem;
+    li{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      img{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  /*3d效果*/
+  perspective: 2000px;
+  .box{
+    transform-style: preserve-3d;
+    transition: .3s;
+    transform: scale(.6) rotateX(-30deg) rotateY(-45deg);
+    li{
+      &:nth-child(1){
+        transform:translatez(2.55rem);
+      }
+      &:nth-child(2){
+        transform:translateZ(-2.55rem) rotateY(180deg);
+      }
+      &:nth-child(3){
+        transform:translateX(-2.55rem) rotateY(-90deg);
+      }
+      &:nth-child(4){
+        transform:translateX(2.55rem) rotateY(90deg);
+      }
+      &:nth-child(5){
+        transform:translateY(-2.55rem) rotateX(90deg);
+      }
+      &:nth-child(6){
+        transform:translateY(2.55rem) rotateX(-90deg);
+      }
+    }
+  }
+}
+
+//cube 结束
+
+
+/*detail */
+.swiper {
+  .returndatail {
+    position: absolute;
+    right: .2rem;
+    top: .2rem ;
+    width: .64rem;
+    height: .75rem;
+    background: url("../imges/zf_return.png") no-repeat;
+    background-size: 100% 100%;
+    z-index: 999;
+  }
+  .swiper-container, .swiper-slide {
+    height: 100%;
+    overflow: hidden;
+  }
+  .page1 {
+      background: #00FF00;
+  }
+  .page2 {
+    background: #FFF9C1;
+  }
+  .page3 {
+    background: #E45454;
+  }
+  .page4 {
+    background: #FACA71;
+  }
+  .page5 {
+    background: #FBFFE8;
+  }
+  .page6 {
+    background: #5975FF;
+  }
+}

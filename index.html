@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>移动个人简历</title>
+  <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/reset.min.css" />
+  <link rel="stylesheet" href="css/swiper.css" />
+   <link rel="stylesheet" href="css/index.css" />
+    <script type="text/javascript">
+    	~function () {
+            let computed = function () {
+                let desW = 640; //设计稿的宽度
+                let devW = document.documentElement.clientWidth;//获取设备的宽度
+                if (devW>=640){
+                    document.documentElement.style.fontSize = '100px';
+                    return;
+                }
+                document.documentElement.style.fontSize = devW/desW*100+'px';//设备的宽度/设计稿的宽度*100
+            };
+            computed();
+            window.addEventListener('resize',computed(),false);
+        }();
+   		
+    </script>
+</head>
+<body>
+	<div  class="main" >
+			<!--loading-->
+			<section class="loading">
+				<div class="title">
+					<h2>个人简历</h2>
+					<h3>H5交互场景简历</h3>
+				</div>
+				<div class="progress">
+					<div class="run"></div>
+				</div>
+			</section>
+			<!--phone-->
+			<section class="phone">
+				<h1>
+					<img src="imges/zf_phoneLogo.png"/>
+				</h1>
+				<div class="time"></div>
+				<div class="phoneItem">
+					<div class="touch"></div>
+					<div class="move"></div>
+				</div>
+				<div class="details">
+					<div class="touch"></div>
+				</div>
+				<audio id="listenMusic" src="audio/bell.mp3" loop="" preload="none"></audio>
+				<audio id="detailMusic" src="audio/say.mp3" preload="none"></audio>
+			</section>
+			<!--message-->
+			<section class="message">
+				<ul class="talkList clearfix">
+					<li class="student">	
+						哎，毕业了，工作还遥遥无期，好愁啊！
+						<i></i>
+						<img src="imges/zf_messageStudent.png"/>
+					</li>
+					<li class="teacher">
+						怎么会？认识我的毕业生一个月都拿一万多的好工作呢!
+						<i></i>
+						<img src="imges/zf_messageLogo.png"/>
+					</li>
+				<li class="student">	
+						哎，毕业了，工作还遥遥无期，好愁啊！
+						<i></i>
+						<img src="imges/zf_messageStudent.png"/>
+					</li>
+					<li class="teacher">
+						怎么会？认识我的毕业生一个月都拿一万多的好工作呢!
+						<i></i>
+						<img src="imges/zf_messageLogo.png"/>
+					</li>
+					<li class="student">	
+						哎，毕业了，工作还遥遥无期，好愁啊！
+						<i></i>
+						<img src="imges/zf_messageStudent.png"/>
+					</li>
+					<li class="teacher">
+						怎么会？认识我的毕业生一个月都拿一万多的好工作呢!
+						<i></i>
+						<img src="imges/zf_messageLogo.png"/>
+					</li>
+					<li class="teacher">
+						怎么会？认识我的毕业生一个月都拿一万多的好工作呢!
+						<i></i>
+						<img src="imges/zf_messageLogo.png"/>
+					</li>
+					<li class="student">	
+						哎，毕业了，工作还遥遥无期，好愁啊！
+						<i></i>
+						<img src="imges/zf_messageStudent.png"/>
+					</li>
+					<li class="teacher">
+						怎么会？认识我的毕业生一个月都拿一万多的好工作呢!
+						<i></i>
+						<img src="imges/zf_messageLogo.png"/>
+					</li>
+					<li class="teacher">
+						怎么会？认识我的毕业生一个月都拿一万多的好工作呢!
+						<i></i>
+						<img src="imges/zf_messageLogo.png"/>
+					</li>
+					<li class="student">	
+						哎，毕业了，工作还遥遥无期，好愁啊！
+						<i></i>
+						<img src="imges/zf_messageStudent.png"/>
+					</li>
+					<li class="teacher">
+						怎么会？认识我的毕业生一个月都拿一万多的好工作呢!
+						<i></i>
+						<img src="imges/zf_messageLogo.png"/>
+					</li>
+				</ul>
+				<div class="keyBoard">
+					<span>都学会了!可还是找不到工作呀!</span>
+					<div class="submit" ></div>
+				</div>
+			</section>
+			<!--cube-->
+			<section class="cube">
+				<ul class="box">
+		            <li><img src="imges/zf_cube1.png" alt=""></li>
+		            <li><img src="imges/zf_cube2.png" alt=""></li>
+		            <li><img src="imges/zf_cube3.png" alt=""></li>
+		            <li><img src="imges/zf_cube4.png" alt=""></li>
+		            <li><img src="imges/zf_cube5.png" alt=""></li>
+		            <li><img src="imges/zf_cube6.png" alt=""></li>
+		        </ul>
+		        <img src="imges/zf_cubeTip.png" class="tip">
+			</section>
+			<!--swiper-->
+			<section class="swiper">
+				<a href="javascript:;" class="returndatail"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide page1">
+
+                </div>
+                <div class="swiper-slide page2">
+
+                </div>
+                <div class="swiper-slide page3">
+
+                </div>
+                <div class="swiper-slide page4">
+
+                </div>
+                <div class="swiper-slide page5">
+
+                </div>
+                <div class="swiper-slide page6">
+
+                </div>
+            </div>
+        </div>
+			</section>
+	</div>
+	<script type="text/javascript" src="js/zpeto.min.js" ></script>
+	<script src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/index.js" ></script>
+	<script src="js/prif.js"></script>
+</body>
+</html>
